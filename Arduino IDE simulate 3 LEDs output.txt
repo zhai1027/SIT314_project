@@ -1,0 +1,33 @@
+// Libraries
+
+// Constants
+
+// Variables
+
+void setup() {
+  Serial.begin(9600);
+  // 初始化随机种子，只需要在setup函数中调用一次
+  randomSeed(analogRead(0));
+}
+
+void loop() {
+  int led_one = random(0, 2);
+  int led_two = random(0, 2);
+  int led_three = random(0, 2);
+
+  // 使用print或println函数将"LED: "和led连接成一个字符串并输出
+  Serial.print("led_one: ");
+  Serial.print(led_one);
+  Serial.print("");
+  delay(5000);
+
+  Serial.print("led_two: ");
+  Serial.print(led_two);
+  Serial.print("");
+  delay(5000);
+
+  Serial.print("led_three: ");
+  Serial.print(led_three);
+  Serial.print("");
+  delay(5000);
+}
